@@ -11,7 +11,7 @@
 	<mirrorOf>*</mirrorOf>
 	<name>nexus-private.hortonworks</name>
 	<url>http://nexus-private.hortonworks.com/nexus/content/groups/public/</url>
- </mirror>
+      </mirror>
  
  使用命令
  
@@ -21,7 +21,7 @@
 
 Hbase操作验证
 
-spark-submit --master yarn  --principal zyc@HDE.H3C.COM --keytab /etc/security/keytabs/zyc.keytab  --conf spark.hadoop.hbase.client.kerberos.principal=zyc@HDE.H3C.COM --jars  /usr/hdp/2.3.4.0-3485/hbase/lib/hbase-hadoop-compat-1.1.2.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/zookeeper-3.4.6.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/guava-12.0.1.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/protobuf-java-2.5.0.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/hbase-protocol-1.1.2.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/hbase-client-1.1.2.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/hadoop-common-2.7.1.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/hbase-common-1.1.2.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/hbase-server-1.1.2.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/metrics-core-2.2.0.jar --class com.cloudera.spark.hbase.example.HBaseScanRDDExample --executor-memory 512M --num-executors 1 hbase-spark-1.1.2.2.6.1.0-2.10.6.jar table
+spark-submit --master yarn --principal zyc@HDE.H3C.COM --keytab /etc/security/keytabs/zyc.keytab --conf spark.hadoop.hbase.client.kerberos.principal=zyc@HDE.H3C.COM --jars /usr/hdp/2.3.4.0-3485/hbase/lib/hbase-hadoop-compat-1.1.2.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/zookeeper-3.4.6.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/guava-12.0.1.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/protobuf-java-2.5.0.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/hbase-protocol-1.1.2.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/hbase-client-1.1.2.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/hadoop-common-2.7.1.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/hbase-common-1.1.2.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/hbase-server-1.1.2.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/metrics-core-2.2.0.jar --class org.apache.hadoop.hbase.spark.example.hbasecontext.HBaseDistributedScanExample  --executor-memory 512M --num-executors 1 hbase-spark-1.1.2.2.6.1.0-2.10.6.jar table
  
 
 spark-submit --master yarn  --principal zyc@HDE.H3C.COM --keytab /etc/security/keytabs/zyc.keytab  --conf spark.hadoop.hbase.client.kerberos.principal=zyc@HDE.H3C.COM --jars  /usr/hdp/2.3.4.0-3485/hbase/lib/hbase-hadoop-compat-1.1.2.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/zookeeper-3.4.6.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/guava-12.0.1.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/protobuf-java-2.5.0.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/hbase-protocol-1.1.2.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/hbase-client-1.1.2.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/hadoop-common-2.7.1.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/hbase-common-1.1.2.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/hbase-server-1.1.2.2.6.2.0-SNAPSHOT.jar,/usr/hdp/2.3.4.0-3485/hbase/lib/metrics-core-2.2.0.jar,/usr/hdp/2.3.4.0-3485/spark/lib/spark-assembly-1.6.3-hadoop2.7.1.jar --class org.apache.hadoop.hbase.spark.example.hbasecontext.HBaseBulkGetExample --executor-memory 512M --num-executors 1 hbase-spark-1.1.2.2.6.1.0-2.10.6.jar table
